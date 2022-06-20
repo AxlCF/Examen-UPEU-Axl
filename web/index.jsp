@@ -60,7 +60,8 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="sucursal" style="background-color: white">Cliente:</label>
+                        <label for="sucursal" style="background-color: white; color:#721c24">Cliente:</label>
+                        <i class="fa-solid fa-circle-user"></i>
                         <select name="cliente" id="clientes" class="form-control">
                             <option value="0">Seleccionar Cliente</option>
                         </select>
@@ -69,16 +70,18 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="sucursal" style="background-color: white">Vendedor:</label>
-                        <select name="producto" id="producto" class="form-control">
-                            <option value="0">Seleccionar Vendedor</option>
+                        <label for="sucursal" style="background-color: white; color:#721c24">Vendedor:</label>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <select name="vendedor" id="vendedor" class="form-control">
+                            <option value="0">Seleccionar vendedor</option>
                         </select>
                     </div>
 
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="sucursal" style="background-color: white">Producto:</label>
+                        <label for="sucursal" style="background-color: white; color:#721c24">Producto:</label>
+                        <i class="fa-solid fa-bucket"></i>
                         <select name="producto" id="productos" class="form-control">
                             <option value="0">Seleccionar Producto</option>
                         </select>
@@ -90,8 +93,7 @@
             </div>
             <div class="row col-1 col-lg-1">
 
-                <button class="btn btn-danger" type="submit">Agregar</button>
-
+                <button class="btn btn-success" id="agregar" type="submit">Agregar</button> 
             </div>
             <div class="row pt-4">
                 <div class="col">
@@ -102,29 +104,31 @@
                         <option value="3">3</option>
                         <option value="1">4</option>
                         <option value="2">5</option>
-                        <option value="3">6</option>
+                        <option value="3">6</option> 
+                        <option value="4">7</option>
                     </select>
                 </div>
                 <div class="col">
                     <input id="productosP" type="text" class="form-control" placeholder="Producto" readonly="readonly">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Precio" readonly="readonly">
+                    <input id="precio" type="text" class="form-control" placeholder="Precio" readonly="readonly">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Stock" readonly="readonly">
+                    <input id="stock" type="text" class="form-control" placeholder="Stock" readonly="readonly">
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-success">Registrar Venta</button>
+                    <button type="button" class="btn btn-success">Registrar Venta</button> 
                 </div>
             </div>    
             <br>
-            <table class="table w-75" id="tablita">
-            <thead>
+            <table class="table table-striped" id="tablita">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
                     <th scope="col">SUCURSAL</th>
+                    <th scope="col">CLIENTES</th>
                     <th scope="col">VENDEDOR</th>
                      <th scope="col">FECHA</th>
                     <th scope="col" colspan="2">Detalle venta</th>
@@ -135,7 +139,39 @@
         </table>
             
         </div>
+        <div class="modal  " id="exampleModal" tabindex="-1"   aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl ">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="" id="exampleModalLabel">Detalles</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table my-auto mx-auto  ">
+
+                                <tr><BR>
+                                <th scope="col">#</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">PRODUCTO</th>
+                                <th scope="col">PRECIO</th>
+                                <th scope="col">CANTIDAD</th>
+                                <th scope="col">TOTAL</th>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <%@include file="../WEB-INF/plantilla/footer.jspf" %>
         <script src="js/cate.js"></script>  
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/sweetAlert.js"></script>
     </body>
 </html>

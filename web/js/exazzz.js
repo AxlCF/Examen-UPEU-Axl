@@ -9,7 +9,7 @@ function listarPost2() {
         for (let i = 0; i < x.length; i++) {
 
 
-            console.log("pene");
+            console.log("producto");
             $("#producto").append($("<option>", {
                 value: x[i],
                 text: x[i].descripcion

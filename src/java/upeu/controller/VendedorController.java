@@ -1,5 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ /*
+* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package upeu.controller;
@@ -11,16 +11,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import upeu.daoImpl.ClientesDAOImlp;
-import upeu.dao.ClienteDAO;
+import upeu.daoImpl.VendedorDAOImpl;
+import upeu.dao.VendedorDAO;
 
-/**
- *
- * @author alarc
- */
-public class ClientesController extends HttpServlet {
 
-    private ClienteDAO dao = new ClientesDAOImlp();
+
+public class VendedorController extends HttpServlet {
+
+    private VendedorDAO dao = new VendedorDAOImpl();
     private Gson gson = new Gson();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -32,7 +30,7 @@ public class ClientesController extends HttpServlet {
                 break;}
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -72,4 +70,3 @@ public class ClientesController extends HttpServlet {
     }// </editor-fold>
 
 }
-

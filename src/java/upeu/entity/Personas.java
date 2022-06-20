@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Personas {
-    private String nombres;
+    private String nombre;
     private String apellidos;
     private String dni;
     private String telefono;

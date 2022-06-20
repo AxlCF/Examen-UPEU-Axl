@@ -15,5 +15,6 @@ public class Clientes {
  private String direccion;
  private String hobby;
  private String correo;
+ private String nombre;
  private int idpersona;
 }

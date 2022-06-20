@@ -11,62 +11,60 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import upeu.config.Conexion;
-import upeu.dao.TablitaDAO;
-import upeu.entity.Tablitauwu;
+import upeu.dao.VendedorDAO;
+import upeu.entity.Vendedor;
 
 /**
  *
- * @author alarc
+ * @author Axl
  */
-public class TablitaDaoImpl implements TablitaDAO{
+public class VendedorDAOImpl implements upeu.dao.VendedorDAO{
 private PreparedStatement ps;
     private ResultSet rs;
     private Connection cx;
 
     @Override
-    public int create(Tablitauwu tablita) {
+    public int create(Vendedor vendedor) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    @Override
+    public int update(Vendedor vendedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int update(Tablitauwu tablita) {
+    public int delete(int idvendedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int delete(int idventa) {
+    public Vendedor read(int idvendedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public Tablitauwu read(int idventa) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
-    @Override
-    public List<Tablitauwu> readAll() {
-        
-        String SQL = "SELECT ventas.idventa AS \"id\", sucursales.direccion AS \"sucursal\",vendedor.nombre AS \"vendedor\",personas.nombres AS \"cliente\",ventas.fecha AS \"fecha\" FROM ventas,sucursales,personas,vendedor ORDER BY 1";
-        List<Tablitauwu> lista = new ArrayList<>();
+@Override
+    public List<Vendedor> readAll() {String SQL = "SELECT  vendedor.idvendedor, vendedor.nombre,vendedor.idpersona From vendedor";
+        List<Vendedor> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();
             ps = cx.prepareStatement(SQL);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Tablitauwu v = new Tablitauwu();
-                v.setIdventa(rs.getInt("id"));
-                v.setSucursal(rs.getString("sucursal"));
-                v.setVendedor(rs.getString("vendedor"));
-                v.setCliente(rs.getString("cliente"));
-                v.setFecha(rs.getString("fecha"));
+                Vendedor s = new Vendedor();
+                s.setIdvendedor(rs.getInt("idvendedor"));
+                s.setIdpersona(rs.getInt("idpersona"));
+                s.setNombre(rs.getString("nombre"));
 
-                lista.add(v);
+
+                lista.add(s);
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
         return lista;
     }
-    }
-    
 
+
+
+}

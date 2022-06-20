@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * @author admin
  */
 public class Conexion {
-    private static final String URL="jdbc:mysql://localhost:3306/exonerar";
+    private static final String URL="jdbc:mysql://localhost:3306/examenupeu";
     private static final String USER = "root";
     private static final String PASS = "";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";

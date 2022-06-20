@@ -5,6 +5,10 @@
         <servlet-class>upeu.controller.HomeController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>VendedorController</servlet-name>
+        <servlet-class>upeu.controller.VendedorController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>MenuController</servlet-name>
         <servlet-class>upeu.controller.MenuController</servlet-class>
     </servlet>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>VentasController</servlet-name>
         <url-pattern>/VentasController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VendedorController</servlet-name>
+        <url-pattern>/VendedorController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SucursalesController</servlet-name>

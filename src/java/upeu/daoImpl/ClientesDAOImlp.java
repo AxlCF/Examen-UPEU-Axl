@@ -11,8 +11,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import upeu.config.Conexion;
-import upeu.dao.ClienteDAO;
 import upeu.entity.Clientes;
+import upeu.dao.ClienteDAO;
 
 /**
  *
@@ -43,7 +43,7 @@ private PreparedStatement ps;
     }
 
     @Override
-    public List<Clientes> readAll() {String SQL = "SELECT clientes.idcliente, clientes.direccion, clientes.hobby, clientes.correo, clientes.idpersona, personas.nombres FROM clientes, personas";
+    public List<Clientes> readAll() {String SQL = "select p.nombres, c.idcliente from clientes c inner join personas p on c.idpersona=p.idpersona";
         List<Clientes> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();
@@ -52,18 +52,15 @@ private PreparedStatement ps;
             while (rs.next()) {
                 Clientes s = new Clientes();
                 s.setIdcliente(rs.getInt("idcliente"));
-                s.setDireccion(rs.getString("direccion"));
-                s.setHobby(rs.getString("hobby"));
-                s.setCorreo(rs.getString("correo"));
-                s.setIdpersona(rs.getInt("idpersona"));
                 s.setNombre(rs.getString("nombres"));
-           
+
                 lista.add(s);
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
         return lista;
+        }
     }
     
-}
+
