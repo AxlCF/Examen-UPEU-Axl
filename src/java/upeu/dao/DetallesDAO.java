@@ -9,7 +9,7 @@ import upeu.entity.Detalles;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public interface DetallesDAO {
      int create(Detalles detalles);

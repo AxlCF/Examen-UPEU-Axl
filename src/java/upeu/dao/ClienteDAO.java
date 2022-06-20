@@ -9,7 +9,7 @@ import upeu.entity.Clientes;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public interface ClienteDAO {
 

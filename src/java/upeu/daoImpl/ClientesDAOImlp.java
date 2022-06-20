@@ -16,7 +16,7 @@ import upeu.dao.ClienteDAO;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class ClientesDAOImlp implements ClienteDAO{
 private PreparedStatement ps;

@@ -16,7 +16,7 @@ import upeu.daoImpl.VentasDaoImpl;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class VentasController extends HttpServlet {
 

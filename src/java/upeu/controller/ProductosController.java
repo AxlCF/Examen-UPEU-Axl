@@ -16,7 +16,7 @@ import upeu.daoImpl.ProductoDaoImpl;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class ProductosController extends HttpServlet {
 

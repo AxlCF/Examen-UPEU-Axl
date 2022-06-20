@@ -9,7 +9,7 @@ import upeu.entity.Sucursales;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public interface SucursalDAO  {
       int create(Sucursales sucursales);

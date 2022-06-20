@@ -17,7 +17,7 @@ import upeu.daoImpl.SucursalDaoImpl;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class SucursalesController extends HttpServlet {
 

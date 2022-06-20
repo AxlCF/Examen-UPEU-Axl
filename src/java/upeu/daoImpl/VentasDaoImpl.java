@@ -16,7 +16,7 @@ import upeu.entity.Ventas;
 
 /**
  *
- * @author alarc
+ * @author Camac
  */
 public class VentasDaoImpl implements VentasDAO {
 

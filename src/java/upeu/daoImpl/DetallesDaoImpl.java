@@ -16,7 +16,7 @@ import upeu.entity.Detalles;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class DetallesDaoImpl implements DetallesDAO {
 

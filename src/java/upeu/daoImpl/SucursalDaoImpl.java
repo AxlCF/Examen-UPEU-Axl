@@ -16,7 +16,7 @@ import upeu.entity.Sucursales;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class SucursalDaoImpl implements SucursalDAO{
     private PreparedStatement ps;

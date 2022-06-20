@@ -9,7 +9,7 @@ import upeu.entity.Tablitauwu;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public interface TablitaDAO {
      int create(Tablitauwu tablita);

@@ -17,9 +17,9 @@ import upeu.daoImpl.TablitaDaoImpl;
 
 /**
  *
- * @author alarc
+ * @author Camac
  */
-public class TablitauwuController extends HttpServlet {
+public class TablaController extends HttpServlet {
 
     private TablitaDAO dao = new TablitaDaoImpl();
     private Gson gson = new Gson();

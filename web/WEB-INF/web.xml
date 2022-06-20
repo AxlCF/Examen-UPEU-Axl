@@ -30,7 +30,7 @@
     </servlet>
     <servlet>
         <servlet-name>Tablitauwu</servlet-name>
-        <servlet-class>upeu.controller.TablitauwuController</servlet-class>
+        <servlet-class>upeu.controller.TablaController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProductosController</servlet-name>

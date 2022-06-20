@@ -16,7 +16,7 @@ import upeu.dao.ClienteDAO;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class ClientesController extends HttpServlet {
 

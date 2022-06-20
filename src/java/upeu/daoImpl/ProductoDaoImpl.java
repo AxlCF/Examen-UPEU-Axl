@@ -17,7 +17,7 @@ import upeu.entity.Productos;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class ProductoDaoImpl implements ProductoDao {
 

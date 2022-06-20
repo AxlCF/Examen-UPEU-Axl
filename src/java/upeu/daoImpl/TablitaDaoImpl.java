@@ -16,7 +16,7 @@ import upeu.entity.Tablitauwu;
 
 /**
  *
- * @author alarc
+ * @author camac
  */
 public class TablitaDaoImpl implements TablitaDAO{
 private PreparedStatement ps;
